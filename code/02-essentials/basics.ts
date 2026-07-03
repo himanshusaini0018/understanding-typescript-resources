@@ -1,4 +1,6 @@
+//Type assignment
 let userName: string; // number, boolean
+//Type inference
 let userAge = 38;
 
 // ...
