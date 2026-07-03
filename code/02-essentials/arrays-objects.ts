@@ -9,6 +9,7 @@ users = [1, 'Max'];
 users = [5, 1];
 users = ['Max', 'Anna'];
 
+//Tuple
 let possibleResults: [number, number]; // [1, -1]
 
 possibleResults = [1, -1];
@@ -31,7 +32,7 @@ let user: {
     id: 5
   }
 };
-
+//Can be used to restrict to non null or undefined values
 let val: {} = 'is a value';
 
 let data: Record<string, number | string>;
