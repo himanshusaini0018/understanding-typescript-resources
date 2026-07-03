@@ -1,3 +1,4 @@
+//Union Tyoe
 let age: string | number = 36;
 
 // ...
