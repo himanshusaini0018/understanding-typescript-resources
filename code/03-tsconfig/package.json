@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    // installed usinng npm install @types/node --save-dev
     "@types/node": "^22.5.0"
   }
 }
