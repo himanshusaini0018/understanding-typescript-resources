@@ -1,11 +1,16 @@
+//Enum type in JS
 // enum Role {
-//   Admin,
+//   Admin, can be overriden default valye of 0 by Admin = "ABC"
 //   Editor,
 //   Guest,
 // }
 
+// Enums and Union type serve same purpose, union type is more commonly used in typescript
+// 
 // type MyNumber = number;
-type Role = 'admin' | 'editor' | 'guest' | 'reader';
+// Assigning type definition to Role or User variable
+//Type is used to define definition
+type Role = 'admin' | 'editor' | 'guest' | 'reader'; // This is called as Literal Types
 type User = {
   name: string;
   age: number;

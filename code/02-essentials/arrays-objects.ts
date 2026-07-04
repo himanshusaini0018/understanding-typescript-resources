@@ -35,6 +35,10 @@ let user: {
 //Can be used to restrict to non null or undefined values
 let val: {} = 'is a value';
 
+//An flexible object which cannnot be string or number, can be populated dynamically, 
+
+// String is type of keys while number | string is type of values it can have. 
+// What properties will be added to it can be added later
 let data: Record<string, number | string>;
 
 data = {
