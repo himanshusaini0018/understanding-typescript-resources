@@ -15,6 +15,7 @@ function getProp<T extends object, U extends keyof T>(obj: T, key: U) {
 
   return val;
 }
+// Keys of return key of object, so here in line 9 adding keyof means key in function can be given from valid keys of object
 
 const data = { id: 1, isStored: false, values: [1, -5, 10] };
 const isStored = getProp(data, 'isStored');

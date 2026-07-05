@@ -10,6 +10,11 @@
 //   return result;
 // }
 
+// let have block scope while var has function and global scope, meaans if a var is defined in if condition
+// then it is accessible outside of if, 
+
+// if it is defined with var then not accesible outside if block
+
 // if (age > 20) {
 //   let isOld = true;
 // }

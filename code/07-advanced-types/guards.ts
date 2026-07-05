@@ -4,6 +4,10 @@ const fileSource: FileSource = {
   path: 'some/path/to/file.csv',
 };
 
+// Adding common property type in both FileSource and DBSource knowns as discriminated pattern
+// Used to put type guard in if condition
+// in function loadData()
+
 type DBSource = { type: 'db', connectionUrl: string };
 const dbSource: DBSource = {
   type: 'db',
@@ -12,6 +16,8 @@ const dbSource: DBSource = {
 
 type Source = FileSource | DBSource;
 
+// Outsourcing guard check to a function
+// Modern type script return boolean and extra infromation
 function isFile(source: Source) {
   return source.type === 'file';
 }
