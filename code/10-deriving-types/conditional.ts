@@ -7,6 +7,10 @@ let text = 1;
 
 // type Example2 = ElementType<typeof text>;
 
+// Mostly used in libraries
+// Assigning types conditionally similarly to using terinary operator
+// In method getFullname tyoe as assigned conditionally
+
 type GetElementType<T> = T extends any[] ? T[number] : never;
 type Example1 = GetElementType<StringArray>;
 type Example2 = GetElementType<typeof text>;

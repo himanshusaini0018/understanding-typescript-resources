@@ -1,3 +1,10 @@
+// Decorator is object oriented programming feature so can be attached to class, method, field, getter and setter
+// Cann't be attached to non-class methods
+
+// Decorator is a function written in certain way
+
+// In Ecma script decorator should accept 2 inputs, generally 1st is Target and 2nd in context of ClassDecoratorContext
+
 function logger<T extends new (...args: any[]) => any>(
   target: T,
   ctx: ClassDecoratorContext

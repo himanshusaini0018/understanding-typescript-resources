@@ -1,3 +1,5 @@
+//imp
+
 // const mainUserName = 'Max';
 
 // const greeting = `Hi there, ${mainUserName}.`;
@@ -17,3 +19,5 @@ type DataFileEventNames = `${keyof DataFile}Changed`;
 type DataFileEvents = {
   [Key in DataFileEventNames]: () => void;
 };
+
+// Dynamically generated possiblity of outputs using unios type by using template literals
