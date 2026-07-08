@@ -5,6 +5,11 @@
 
 // In Ecma script decorator should accept 2 inputs, generally 1st is Target and 2nd in context of ClassDecoratorContext
 
+
+// T extends new (...args: any[])=> any signifies here following
+// new --> New class
+// (...args: any[]) can accept any number of arguments
+// any will return any type of argument
 function logger<T extends new (...args: any[]) => any>(
   target: T,
   ctx: ClassDecoratorContext
@@ -13,6 +18,7 @@ function logger<T extends new (...args: any[]) => any>(
   console.log(target);
   console.log(ctx);
 
+  // extending target means adding more properties to class
   return class extends target {
     constructor(...args: any[]) {
       super(...args);
@@ -26,7 +32,10 @@ function autobind(
   target: (...args: any[]) => any,
   ctx: ClassMethodDecoratorContext
 ) {
+
+  // addInitializer is special method which get executed in constructor of target object
   ctx.addInitializer(function (this: any) {
+    //binding current object to this
     this[ctx.name] = this[ctx.name].bind(this);
   });
 
@@ -35,7 +44,8 @@ function autobind(
     target.apply(this);
   };
 }
-
+// for decorator in pattern : replacer('') -> accepting an value
+/// This function is wrapped in another function, receiving input value from argument
 function replacer<T>(initValue: T) {
   return function replacerDecorator(
     target: undefined,
