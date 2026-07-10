@@ -35,6 +35,7 @@ function autobind(
 
   // addInitializer is special method which get executed in constructor of target object
   ctx.addInitializer(function (this: any) {
+    // Attach this code or call this function from constructor
     //binding current object to this
     this[ctx.name] = this[ctx.name].bind(this);
   });
